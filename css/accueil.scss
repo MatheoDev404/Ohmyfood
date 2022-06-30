@@ -1,14 +1,14 @@
 // VAR
 $purple: #9356DC;
 $pink: #ff79da;
-$light-pink:rgb(238, 206, 238);
+$light-pink:#F5EDFF;
 $green: #99E2D0;
 $black: #000000;
 $white: #ffffff;
 
-$grey:rgb(211, 211, 211);
-$dark-grey:rgb(146, 146, 146);
-$light-grey:rgb(240, 238, 238);
+$grey:#EAEAEA;
+$dark-grey:#353535;
+$light-grey:#f6f6f6;
 
 // GLOBAL CSS
 html{
@@ -190,10 +190,21 @@ header{
             box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
             display: flex;
             flex-direction: column;
-            
+            position: relative;
+            > p{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                font-size: 1.4rem;
+                padding: 8px 15px;
+                color: #1c7a63;
+                background-color: #99e2d0;
+                border-radius: 3px;
+            }
             img{
                 flex: 7;
                 object-fit: cover;
+                object-position: 50% 50%;
                 overflow: hidden;
             }
             > div{ 
@@ -235,8 +246,20 @@ header{
 
 // FOOTER
 footer{
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    font-size:1.4rem ;
-    background-color: $grey;
+    font-size:1.5rem ;
+    background-color: #353535;
+    .footer__link{
+        color: #fff;
+        padding: 5px 0;
+        i{
+            padding: 0 10px 0 0;
+        }
+    }
+    .font-shrikhand {
+        font-size:1.8rem;
+        padding-bottom: 20px;
+    }
 }
