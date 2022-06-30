@@ -1,0 +1,114 @@
+// VAR
+$purple: #9356DC;
+$pink: #FF79DA;
+$green: #99E2D0;
+$black: #000000;
+$white: #ffffff;
+$grey:rgb(218, 216, 216);
+$light-grey:rgb(240, 238, 238);
+
+// GLOBAL CSS
+html{
+    font-family: 'Roboto';
+    font-size: 10px; // 10px, pour faciliter les calculs en rem
+}
+
+
+h1,h2,h3,h4,h5,p,input,ul{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited{
+    color: #000;
+}
+
+img{
+    width: 200px;
+}
+
+// GLOBAL CLASS
+.font-shrikhand{
+    font-family: "Shrikhand", Arial, sans-serif;
+}
+
+// HEADER
+header{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 200px;
+        padding : 20px 0;
+    }
+    
+}
+
+// MAIN
+.localisation{
+    width: 100%;
+    padding: 20px;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+    -webkit-box-shadow: inset 0px 4px 5px -1px rgba(0,0,0,0.6); 
+    box-shadow: inset 0px 4px 5px -1px rgba(0,0,0,0.6);
+    i{
+        padding: 0 25px 5px;
+    }
+    input {
+        background-color: $grey;
+        border: none; 
+    }
+    input:focus {
+        outline: none;
+    }
+}
+
+.explorer{
+    padding:0 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    background-color: $light-grey;
+
+    h2 {
+        padding-top: 50px;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    p {
+        padding-top: 20px;
+        font-size: 2.5rem;
+        font-weight: lighter;
+    }
+    a{
+        margin: 40px 0;
+        padding: 15px;
+        font-size: 2rem;
+        color: $white;
+        background: rgb(2,0,36);
+        background: linear-gradient(346deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        border-radius: 25px;
+    }
+}
+
+// FOOTER
+footer{
+    display: flex;
+    flex-direction: column;
+    font-size:1.4rem ;
+    background-color: $grey;
+}

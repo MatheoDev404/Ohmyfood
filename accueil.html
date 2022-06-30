@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
     
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap" rel="stylesheet"> 
+    
+    <!-- NORMALIZE CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/accueil.css">
 
 </head>
 <body>
     <header>
-        <img class="header__logo"src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
-        <div class="localisation">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Paris, Belleville</p>
-        </div>
-
+        <img src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
     </header>
     <main>
-        <section>
+        <section class="localisation">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Paris, Belleville">
+        </section>
+        <section class="explorer">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des réstaurants d'exception, séléctionnés par nos soins.</p>
-            <a href="#">Explorer nos réstaurants</a>
+            <a href="#">Explorer nos restaurants</a>
         </section>
-        <section>
+        <section class="fonctionnement">
             <h2>Fonctionnement</h2>
             <ol>
                 <li>
@@ -89,9 +96,7 @@
         </section>
     </main>
     <footer>
-        <a href="#">
-            <img src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
-        </a> 
+        <a class="font-shrikhand" href="#">ohmyfood</a> 
         <a href="#">
             <i class="fa-solid fa-utensils"></i>
             Proposer un restaurant
