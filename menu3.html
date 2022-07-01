@@ -1,94 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html5>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
 
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap" rel="stylesheet"> 
+    
+    <!-- NORMALIZE CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/menus.css">
 
 </head>
 <body>
     <header>
-        <a href=""><i class="fa-regular fa-arrow-left"></i></a>
+        <a href="accueil.html"><i class="fa-solid fa-arrow-left"></i></a>
         <img class="header__logo"src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
     </header>
     <main>
-        <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo du menu">
-        <h1><span class="bold">à</span> la française</h1>
+        <section class="menu">
+            <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo du menu">
+            
+            <div class="menu__title">
+                <h1>À la française</h1>
+                <button type="button">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
+        </section>
         <section class="entrees">
-            <h2>Entrées</h2>
-            <div>
+            <h2><span>Entr</span>ées</h2>
+            <div class="entrees__cards">
                 <h3>Tartare de poulpe acidulé</h3>
                 <p>Aux zestes d'orange</p>
                 <p>25€</p>
             </div>
-            <div>
+            <div class="entrees__cards">
                 <h3>Velouté de légumes d'antan</h3>
                 <p>Carotte, panais, topinambour</p>
                 <p>35€</p>
             </div>
-            <div>
+            <div class="entrees__cards">
                 <h3>Soupe à l'oignon</h3>
                 <p>Revisitée</p>
                 <p>20€</p>
             </div>
        </section>
        <section class="plats">
-            <h2>Plats</h2>
-            <div>
+            <h2><span>Plat</span>s</h2>
+            <div class="plats__cards">
                 <h3>Coquilles Saint-Jacques</h3>
                 <p>Accompagnées d'une purée de panais</p>
                 <p>40€</p>
             </div>
-            <div>
+            <div class="plats__cards">
                 <h3>Magret de canard</h3>
                 <p>Et parmentier de pommes de terre</p>
                 <p>35€</p>
             </div>
-            <div>
+            <div class="plats__cards">
                 <h3>Pigeonneau d’Ille-et-Vilaine</h3>
                 <p>Sur son lit de gnocchis aux légumes</p>
                 <p>44€</p>
             </div>
 
        </section>
-       <section class="deserts">
-            <h2>Desserts</h2>
-            <div>
+       <section class="desserts">
+            <h2><span>Dess</span>erts</h2>
+            <div class="desserts__cards">
                 <h3>Pétales de violettes glacés</h3>
                 <p>Et purée de noisettes</p>
                 <p>18€</p>
             </div>
-            <div>
+            <div class="desserts__cards">
                 <h3>Fondant au chocolat</h3>
                 <p>Revisité</p>
                 <p>22€</p>
             </div>
-            <div>
+            <div class="desserts__cards">
                 <h3>Millefeuille croustillant</h3>
                 <p>Myrtilles et pâte d’amande</p>
                 <p>23€</p>
             </div>
        </section>
+       <a href="#">Commander</a>
     </main>
     <footer>
-        <a href="#">
-            <img src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
-        </a> 
-        <a href="#">
-            <i class="fa-solid fa-utensils"></i>
+        <a class="footer__link footer__logo" href="#">ohmyfood</a> 
+        <a class="footer__link" href="#">
+            <i class="fa-solid fa-utensils footer__link__icon"></i>
             Proposer un restaurant
         </a>
-        <a href="#">
-            <i class="fa-solid fa-handshake-angle"></i>
+        <a class="footer__link" href="#">
+            <i class="fa-solid fa-handshake-angle footer__link__icon"></i>
             Devenir partenaire
         </a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+        <a class="footer__link" href="#">Mentions légales</a>
+        <a class="footer__link" href="#">Contact</a>
     </footer>
 </body>
 </html>

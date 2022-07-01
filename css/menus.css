@@ -104,6 +104,7 @@ main > a:hover {
 }
 
 .entrees, .plats, .desserts {
+  width: 100%;
   padding: 10px;
 }
 .entrees h2, .plats h2, .desserts h2 {
