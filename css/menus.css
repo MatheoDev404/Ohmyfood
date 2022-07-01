@@ -1,0 +1,143 @@
+html {
+  font-family: "Roboto";
+  font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, p, input, ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+}
+
+button:hover {
+  border: none;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: #000;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+header a {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 3rem;
+}
+header .header__logo {
+  width: 200px;
+  padding: 20px 0;
+}
+
+main {
+  background-color: #EAEAEA;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 25px;
+}
+.menu img {
+  width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.menu__title {
+  width: 100%;
+  margin-top: -50px;
+  padding: 50px 0 20px 0;
+  background-color: #EAEAEA;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.menu__title h1 {
+  font-size: 3rem;
+  font-family: "Shrikhand", Arial, sans-serif;
+}
+.menu__title button {
+  background-color: #EAEAEA;
+}
+.menu__title button i {
+  font-size: 2.5rem;
+}
+
+.entrees, .plats, .desserts {
+  padding: 10px;
+}
+.entrees h2, .plats h2, .desserts h2 {
+  padding: 10px 10px 20px 10px;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.entrees h2 span, .plats h2 span, .desserts h2 span {
+  padding-bottom: 5px;
+  border-bottom: #99E2D0 solid 3px;
+}
+.entrees__cards, .plats__cards, .desserts__cards {
+  background-color: #ffffff;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.entrees__cards h3, .plats__cards h3, .desserts__cards h3 {
+  width: 100%;
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+}
+.entrees__cards p, .plats__cards p, .desserts__cards p {
+  font-size: 1.5rem;
+}
+.entrees__cards p:last-of-type, .plats__cards p:last-of-type, .desserts__cards p:last-of-type {
+  font-weight: bold;
+}
+
+footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  background-color: #353535;
+}
+footer .footer__link {
+  color: #fff;
+  padding: 5px 0;
+}
+footer .footer__link__icon {
+  width: 24px;
+  padding: 0 10px 0 0;
+}
+footer .footer__logo {
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+  font-family: "Shrikhand", Arial, sans-serif;
+}/*# sourceMappingURL=menus.css.map */

@@ -6,74 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
 
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap" rel="stylesheet"> 
+    
+    <!-- NORMALIZE CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/menus.css">
 
 </head>
 <body>
     <header>
-        <a href=""><i class="fa-regular fa-arrow-left"></i></a>
+        <a href="accueil.html"><i class="fa-solid fa-arrow-left"></i></a>
         <img class="header__logo"src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
     </header>
     <main>
-        <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo du menu">
-        <h1>La note enchantée</h1>
+        <section class="menu">
+            <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo du menu">
+            <div class="menu__title">
+                <h1>La note enchantée</h1>
+                <button type="button">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
+        </section>  
         <section class="entrees">
-            <h2>Entrées</h2>
-            <div>
+            <h2><span>Entr</span>ées</h2>
+            <div class="entrees__cards">
                 <h3>Ravioles de foie gras</h3>
                 <p>Accompagnés de leur crème à la truffe</p>
                 <p>25€</p>
             </div>
-            <div>
+            <div class="entrees__cards">
                 <h3>Caviar osciètre</h3>
                 <p>Sur blini à la farine de blé noir</p>
                 <p>35€</p>
             </div>
-            <div>
+            <div class="entrees__cards">
                 <h3>Homard et espuma de potiron</h3>
                 <p>Mariné aux zestes d'orange</p>
                 <p>20€</p>
             </div>
-            <div>
+            <div class="entrees__cards">
                 <h3>Foie gras de canard cuit entier</h3>
                 <p>Confiture de figue et pain toasté</p>
                 <p>35€</p>
             </div>
        </section>
        <section class="plats">
-            <h2>Plats</h2>
-            <div>
+            <h2><span>Plat</span>s</h2>
+            <div class="plats__cards">
                 <h3>Noix de coquilles Saint-Jacques</h3>
                 <p>Sur lit de purée de céleri-rave</p>
                 <p>40€</p>
             </div>
-            <div>
+            <div class="plats__cards">
                 <h3>Langoustine poêlée</h3>
                 <p>Purée de patate douce</p>
                 <p>35€</p>
             </div>
-            <div>
+            <div class="plats__cards">
                 <h3>Mijoté de queue de boeuf</h3>
                 <p>Et riz sauvage aux zestes de citron</p>
                 <p>44€</p>
             </div>
-
        </section>
-       <section class="deserts">
-            <h2>Desserts</h2>
-            <div>
+       <section class="desserts">
+            <h2><span>Dess</span>erts</h2>
+            <div class="desserts__cards">
                 <h3>Macaron noisette et chocolat</h3>
                 <p>Glace au caramel brun et sel de Guérande</p>
                 <p>18€</p>
             </div>
-            <div>
+            <div class="desserts__cards">
                 <h3>Baba au rhum revisité</h3>
                 <p>Avec son coulis de citron</p>
                 <p>22€</p>
             </div>
-            <div>
+            <div class="desserts__cards">
                 <h3>Tarte au citron meringuée</h3>
                 <p>Déstructurée</p>
                 <p>23€</p>
@@ -81,19 +95,17 @@
        </section>
     </main>
     <footer>
-        <a href="#">
-            <img src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
-        </a> 
-        <a href="#">
-            <i class="fa-solid fa-utensils"></i>
+        <a class="footer__link footer__logo" href="#">ohmyfood</a> 
+        <a class="footer__link" href="#">
+            <i class="fa-solid fa-utensils footer__link__icon"></i>
             Proposer un restaurant
         </a>
-        <a href="#">
-            <i class="fa-solid fa-handshake-angle"></i>
+        <a class="footer__link" href="#">
+            <i class="fa-solid fa-handshake-angle footer__link__icon"></i>
             Devenir partenaire
         </a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+        <a class="footer__link" href="#">Mentions légales</a>
+        <a class="footer__link" href="#">Contact</a>
     </footer>
 </body>
 </html>

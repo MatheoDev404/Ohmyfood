@@ -1,0 +1,164 @@
+// VAR
+$purple: #9356DC;
+
+$pink: #ff79da;
+$light-pink:#F5EDFF;
+
+$green: #99E2D0;
+
+$black: #000000;
+
+$white: #ffffff;
+
+$grey:#EAEAEA;
+$dark-grey:#353535;
+$light-grey:#f6f6f6;
+
+// GLOBAL CSS
+html{
+    font-family: 'Roboto';
+    font-size: 10px; // 10px, pour faciliter les calculs en rem
+}
+
+h1,h2,h3,h4,h5,p,input,ul{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    border:none;
+    background-color: #fff;
+}
+
+button:hover{
+    border:none;
+    background-color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited{
+    color: #000;
+}
+
+// HEADER
+header{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    a{
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 3rem;
+    }
+
+    .header__logo{
+        width: 200px;
+        padding : 20px 0;
+    }
+}
+
+// MAIN
+main{
+    background-color: $grey;
+} 
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 25px;
+    img{
+        width:100%;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+    &__title{
+        width: 100%;
+        margin-top: -50px;
+        padding: 50px 0 20px 0;
+        background-color: $grey;
+        border-radius: 50px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        h1{
+            font-size: 3rem;
+            font-family: "Shrikhand", Arial, sans-serif;
+        }
+        button{
+            background-color: $grey;
+            i{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+.entrees, .plats ,.desserts{
+    padding: 10px;
+    h2{
+        padding: 10px 10px 20px 10px;
+        font-size: 1.8rem;
+        font-weight: lighter;
+        text-transform: uppercase;
+        span{
+            padding-bottom: 5px;
+            border-bottom: $green solid 3px;
+        }
+    }
+    &__cards{
+        background-color: #ffffff;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h3{
+            width: 100%;
+            font-size: 1.8rem;
+            padding-bottom: 10px;
+        }
+        p{
+            font-size:1.5rem ;
+        }
+        p:last-of-type{
+            font-weight: bold;
+        }
+        
+    }
+}
+
+
+
+// FOOTER
+footer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size:1.5rem ;
+    background-color: #353535;
+    .footer__link{
+        color: #fff;
+        padding: 5px 0;
+        &__icon{
+            width: 24px;
+            padding: 0 10px 0 0;
+        }
+    }
+    .footer__logo {
+        font-size:1.8rem;
+        padding-bottom: 20px;
+        font-family: "Shrikhand", Arial, sans-serif;
+    }
+}
