@@ -70,6 +70,22 @@ header{
 // MAIN
 main{
     background-color: $grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    >  a{
+        margin: 30px auto 70px;
+        padding: 15px 50px;
+        font-size: 1.8rem;
+        color: $white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        background: rgb(2,0,36);
+        background: linear-gradient(257deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%); 
+        border-radius: 25px;
+    }
+    > a:hover{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
 } 
 .menu{
     display: flex;
