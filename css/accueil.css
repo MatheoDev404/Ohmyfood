@@ -31,6 +31,111 @@ a:visited {
   color: #000;
 }
 
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  -webkit-animation: fadeOut 3s linear forwards;
+          animation: fadeOut 3s linear forwards;
+}
+.container .loader {
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #9356DC;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-animation: pulse 1s linear infinite;
+          animation: pulse 1s linear infinite;
+}
+.container .loader:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #9356DC;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: scaleUp 1s linear infinite;
+          animation: scaleUp 1s linear infinite;
+}
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  60%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  60%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@-webkit-keyframes pulse {
+  0%, 60%, 100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+}
+@keyframes pulse {
+  0%, 60%, 100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  99% {
+    width: 100%;
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  99% {
+    width: 100%;
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -86,13 +191,14 @@ header img {
   padding: 15px 25px;
   font-size: 1.8rem;
   color: #ffffff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(257deg, rgb(2, 0, 36) 0%, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: #9356DC;
   border-radius: 25px;
+  transition: box-shadow 1s, background-color 1s;
 }
 .explorer a:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #ff79da;
 }
 
 .fonctionnement {
@@ -115,8 +221,9 @@ header img {
   padding: 25px 20px;
   border-radius: 25px;
   background-color: #f6f6f6;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: relative;
+  transition: box-shadow 1s, background-color 1s;
 }
 .fonctionnement ul li a span {
   font-size: 1.3rem;
@@ -132,10 +239,11 @@ header img {
   font-size: 2rem;
   padding: 0 10px;
   color: #353535;
+  transition: color 1s;
 }
 .fonctionnement ul li a:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: #F5EDFF;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 .fonctionnement ul li a:hover i {
   color: #9356DC;
@@ -162,10 +270,11 @@ header img {
   background-color: #fff;
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  display: flex;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   flex-direction: column;
   position: relative;
+  display: flex;
+  transition: box-shadow 1s;
 }
 .restaurants__cards > a > p {
   position: absolute;
@@ -202,17 +311,35 @@ header img {
   font-weight: lighter;
 }
 .restaurants__cards > a > div button {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 .restaurants__cards > a > div button i {
   font-size: 3rem;
-  font-weight: lighter;
 }
-.restaurants__cards > a > div button:hover i {
+.restaurants__cards > a > div button .fa-solid {
+  margin-top: 10px;
   color: #9356DC;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-size: 1rem;
+  transition: font-size 1.5s, margin-top 1.5s;
+}
+.restaurants__cards > a > div button:hover .fa-solid {
+  margin-top: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 3rem;
+}
+.restaurants__cards > a > div button:hover .fa-regular {
+  display: none;
+  overflow: hidden;
+  display: none;
 }
 .restaurants__cards > a:hover {
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 footer {
