@@ -14,6 +14,18 @@ $grey:#EAEAEA;
 $dark-grey:#353535;
 $light-grey:#f6f6f6;
 
+// KEYFRAME
+
+@keyframes fadeIn { 
+    100% { opacity: 1; }
+}
+
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); 
+    } 
+}
+
 // GLOBAL CSS
 html{
     font-family: 'Roboto';
@@ -94,7 +106,6 @@ main{
     border-radius: 25px;
     img{
         width:100%;
-        max-height: 300px;
         object-fit: cover;
         object-position: 50% 50%;
     }
@@ -106,8 +117,9 @@ main{
         border-radius: 50px;
         overflow: hidden;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         h1{
+            padding-right:30px;
             font-size: 3rem;
             font-family: "Shrikhand", Arial, sans-serif;
         }
@@ -120,7 +132,9 @@ main{
     }
 }
 
-.entrees, .plats ,.desserts{
+.entrees, 
+.plats,
+.desserts{
     width: 100%;
     padding: 10px;
     h2{
@@ -133,32 +147,87 @@ main{
             border-bottom: $green solid 3px;
         }
     }
-    &__cards{
+    .cards{
+        opacity: 0;
         background-color: #ffffff;
         border-radius: 25px;
         margin-bottom: 10px;
-        padding: 20px;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
-        h3{
+        overflow: hidden;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: box-shadow 1s;
+        animation: fadeIn 1s forwards;
+        &:nth-child(2){
+            animation-delay: 0.5s;
+        }
+        &:nth-child(3){
+            animation-delay: 1s;
+        }
+        &:nth-child(4){
+            animation-delay: 1.5s;
+        }
+        &:nth-child(5){
+            animation-delay: 2s;
+        }
+        .cards__body{
             width: 100%;
-            font-size: 1.8rem;
-            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+            h3{
+                width: 100%;
+                font-size: 1.8rem;
+                padding-bottom: 10px;
+            }
+            p{
+                font-size:1.5rem ;
+            }
+            p:last-of-type{
+                font-weight: bold;
+            }
         }
-        p{
-            font-size:1.5rem ;
-        }
-        p:last-of-type{
-            font-weight: bold;
-        }
-        
+        .cards__check{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $green;
+            width: 0;
+            transition: width 0.75s;
+            i{
+                color: $white;
+                font-size: 2.5rem;
+            }
+        } 
+    }
+    .cards:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .cards__check{
+            width: 120px;
+            i{
+                animation: spin 1s ;
+            }
+        }  
     }
 }
-
-
+.commander{
+    margin: 40px 0;
+    padding: 15px 25px;
+    font-size: 1.8rem;
+    color: $white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: $purple;
+    border-radius: 25px;
+    transition: box-shadow 1s, background-color 1s;
+}
+.commander:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: $pink;
+}
 
 // FOOTER
+
 footer{
     padding: 20px;
     display: flex;

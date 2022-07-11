@@ -1,3 +1,71 @@
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  60%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  60%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@-webkit-keyframes pulse {
+  0%, 60%, 100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+}
+@keyframes pulse {
+  0%, 60%, 100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  99% {
+    width: 100%;
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  99% {
+    width: 100%;
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
 html {
   font-family: "Roboto";
   font-size: 10px;
@@ -66,76 +134,7 @@ a:visited {
   -webkit-animation: scaleUp 1s linear infinite;
           animation: scaleUp 1s linear infinite;
 }
-@-webkit-keyframes scaleUp {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-  60%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-@keyframes scaleUp {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-  60%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-@-webkit-keyframes pulse {
-  0%, 60%, 100% {
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(1.2);
-  }
-}
-@keyframes pulse {
-  0%, 60%, 100% {
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(1.2);
-  }
-}
 
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 0;
-  }
-  99% {
-    width: 100%;
-    height: 100vh;
-  }
-  100% {
-    height: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 0;
-  }
-  99% {
-    width: 100%;
-    height: 100vh;
-  }
-  100% {
-    height: 0;
-  }
-}
 header {
   display: flex;
   justify-content: center;

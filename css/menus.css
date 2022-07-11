@@ -1,3 +1,23 @@
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 html {
   font-family: "Roboto";
   font-size: 10px;
@@ -76,7 +96,6 @@ main > a:hover {
 }
 .menu img {
   width: 100%;
-  max-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 50%;
@@ -90,9 +109,10 @@ main > a:hover {
   border-radius: 50px;
   overflow: hidden;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .menu__title h1 {
+  padding-right: 30px;
   font-size: 3rem;
   font-family: "Shrikhand", Arial, sans-serif;
 }
@@ -103,39 +123,138 @@ main > a:hover {
   font-size: 2.5rem;
 }
 
-.entrees, .plats, .desserts {
+.entrees,
+.plats,
+.desserts {
   width: 100%;
   padding: 10px;
 }
-.entrees h2, .plats h2, .desserts h2 {
+.entrees h2,
+.plats h2,
+.desserts h2 {
   padding: 10px 10px 20px 10px;
   font-size: 1.8rem;
   font-weight: lighter;
   text-transform: uppercase;
 }
-.entrees h2 span, .plats h2 span, .desserts h2 span {
+.entrees h2 span,
+.plats h2 span,
+.desserts h2 span {
   padding-bottom: 5px;
   border-bottom: #99E2D0 solid 3px;
 }
-.entrees__cards, .plats__cards, .desserts__cards {
+.entrees .cards,
+.plats .cards,
+.desserts .cards {
+  opacity: 0;
   background-color: #ffffff;
   border-radius: 25px;
   margin-bottom: 10px;
-  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: box-shadow 1s;
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
 }
-.entrees__cards h3, .plats__cards h3, .desserts__cards h3 {
+.entrees .cards:nth-child(2),
+.plats .cards:nth-child(2),
+.desserts .cards:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.entrees .cards:nth-child(3),
+.plats .cards:nth-child(3),
+.desserts .cards:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.entrees .cards:nth-child(4),
+.plats .cards:nth-child(4),
+.desserts .cards:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.entrees .cards:nth-child(5),
+.plats .cards:nth-child(5),
+.desserts .cards:nth-child(5) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.entrees .cards .cards__body,
+.plats .cards .cards__body,
+.desserts .cards .cards__body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.entrees .cards .cards__body h3,
+.plats .cards .cards__body h3,
+.desserts .cards .cards__body h3 {
   width: 100%;
   font-size: 1.8rem;
   padding-bottom: 10px;
 }
-.entrees__cards p, .plats__cards p, .desserts__cards p {
+.entrees .cards .cards__body p,
+.plats .cards .cards__body p,
+.desserts .cards .cards__body p {
   font-size: 1.5rem;
 }
-.entrees__cards p:last-of-type, .plats__cards p:last-of-type, .desserts__cards p:last-of-type {
+.entrees .cards .cards__body p:last-of-type,
+.plats .cards .cards__body p:last-of-type,
+.desserts .cards .cards__body p:last-of-type {
   font-weight: bold;
+}
+.entrees .cards .cards__check,
+.plats .cards .cards__check,
+.desserts .cards .cards__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 0;
+  transition: width 0.75s;
+}
+.entrees .cards .cards__check i,
+.plats .cards .cards__check i,
+.desserts .cards .cards__check i {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+.entrees .cards:hover,
+.plats .cards:hover,
+.desserts .cards:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.entrees .cards:hover .cards__check,
+.plats .cards:hover .cards__check,
+.desserts .cards:hover .cards__check {
+  width: 120px;
+}
+.entrees .cards:hover .cards__check i,
+.plats .cards:hover .cards__check i,
+.desserts .cards:hover .cards__check i {
+  -webkit-animation: spin 1s;
+          animation: spin 1s;
+}
+
+.commander {
+  margin: 40px 0;
+  padding: 15px 25px;
+  font-size: 1.8rem;
+  color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: #9356DC;
+  border-radius: 25px;
+  transition: box-shadow 1s, background-color 1s;
+}
+
+.commander:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #ff79da;
 }
 
 footer {

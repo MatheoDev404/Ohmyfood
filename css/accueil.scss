@@ -14,6 +14,45 @@ $grey:#EAEAEA;
 $dark-grey:#353535;
 $light-grey:#f6f6f6;
 
+// KEYFRAME
+
+@keyframes scaleUp {
+    0% { 
+        transform: translate(-50%, -50%) scale(0) 
+    }
+    60% , 100% { 
+        transform: translate(-50%, -50%)  scale(1)
+    }
+}
+@keyframes pulse {
+    0% , 60% , 100%{ 
+        transform:  scale(1) 
+    }
+    80% {
+         transform:  scale(1.2)
+        }
+}
+
+@keyframes fadeOut {
+    0%   {
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+        
+    }
+    99%{
+        width: 100%;
+        height: 100vh;
+    }
+    100%{
+        height: 0;
+    }
+}
+
 // GLOBAL CSS
 html{
     font-family: 'Roboto';
@@ -82,35 +121,8 @@ a:visited{
         transform: translate(-50%, -50%);
         animation: scaleUp 1s linear infinite;
     }
+}
 
-    @keyframes scaleUp {
-        0% { transform: translate(-50%, -50%) scale(0) }
-        60% , 100% { transform: translate(-50%, -50%)  scale(1)}
-    }
-    @keyframes pulse {
-        0% , 60% , 100%{ transform:  scale(1) }
-        80% { transform:  scale(1.2)}
-    }
-}
-@keyframes fadeOut {
-    0%   {
-        opacity: 1;
-    }
-    90%{
-        opacity: 1;
-    }
-    95% {
-        opacity: 0;
-        
-    }
-    99%{
-        width: 100%;
-        height: 100vh;
-    }
-    100%{
-        height: 0;
-    }
-}
 
 // HEADER
 header{
@@ -242,7 +254,6 @@ header{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        
         > a{
             height: 300px;
             width: 450px;
@@ -325,7 +336,6 @@ header{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
         }
     }
-
 }
 
 // FOOTER
