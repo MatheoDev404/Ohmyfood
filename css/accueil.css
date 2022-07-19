@@ -1,3 +1,5 @@
+@import "normalize.css";
+@import "main.css";
 @-webkit-keyframes scaleUp {
   0% {
     transform: translate(-50%, -50%) scale(0);
@@ -31,13 +33,10 @@
   }
 }
 @-webkit-keyframes fadeOut {
-  0% {
+  0%, 97% {
     opacity: 1;
   }
-  90% {
-    opacity: 1;
-  }
-  95% {
+  98% {
     opacity: 0;
   }
   99% {
@@ -49,13 +48,10 @@
   }
 }
 @keyframes fadeOut {
-  0% {
+  0%, 97% {
     opacity: 1;
   }
-  90% {
-    opacity: 1;
-  }
-  95% {
+  98% {
     opacity: 0;
   }
   99% {
@@ -66,49 +62,62 @@
     height: 0;
   }
 }
-html {
-  font-family: "Roboto";
-  font-size: 10px;
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  background-color: #353535;
+}
+footer .footer__link {
+  color: #fff;
+  padding: 5px 0;
+}
+footer .footer__link .footer__link__icon {
+  width: 24px;
+  padding: 0 10px 0 0;
+}
+footer .footer__logo {
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+  font-family: "Shrikhand", Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, p, input, ul {
-  padding: 0;
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-button {
-  border: none;
-  background-color: #fff;
-}
-
-button:hover {
-  border: none;
-  background-color: #fff;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-a:visited {
-  color: #000;
-}
-
-.container {
+.loader {
+  position: fixed;
+  z-index: 10;
   width: 100%;
   height: 100vh;
   display: flex;
+  background-color: #ffffff;
   justify-content: space-around;
   overflow: hidden;
-  -webkit-animation: fadeOut 3s linear forwards;
-          animation: fadeOut 3s linear forwards;
+  -webkit-animation: fadeOut 2s linear forwards;
+          animation: fadeOut 2s linear forwards;
 }
-.container .loader {
+.loader__animation {
   align-self: center;
   width: 100px;
   height: 100px;
@@ -119,7 +128,7 @@ a:visited {
   -webkit-animation: pulse 1s linear infinite;
           animation: pulse 1s linear infinite;
 }
-.container .loader:after {
+.loader__animation:after {
   content: "";
   position: absolute;
   width: 100px;
@@ -144,7 +153,7 @@ header img {
   padding: 20px 0;
 }
 
-.localisation {
+main .localisation {
   padding: 20px 0 20px 60px;
   font-size: 1.8rem;
   display: flex;
@@ -153,18 +162,17 @@ header img {
   background-color: #EAEAEA;
   box-shadow: inset 0px 4px 5px -1px rgba(0, 0, 0, 0.6);
 }
-.localisation i {
+main .localisation i {
   padding: 0 25px 5px;
 }
-.localisation input {
+main .localisation input {
   background-color: #EAEAEA;
   border: none;
 }
-.localisation input:focus {
+main .localisation input:focus {
   outline: none;
 }
-
-.explorer {
+main .explorer {
   padding: 0 50px;
   display: flex;
   justify-content: center;
@@ -173,49 +181,60 @@ header img {
   text-align: center;
   background-color: #f6f6f6;
 }
-.explorer h2 {
+main .explorer h2 {
   width: 100%;
   padding-top: 50px;
   font-size: 2.5rem;
   font-weight: bold;
 }
-.explorer p {
+main .explorer p {
   width: 100%;
   padding-top: 20px;
   font-size: 2rem;
   font-weight: lighter;
 }
-.explorer a {
+main .explorer a {
   margin: 40px 0;
   padding: 15px 25px;
   font-size: 1.8rem;
   color: #ffffff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background: #9356DC;
   border-radius: 25px;
+  background-color: #9356DC;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
   transition: box-shadow 1s, background-color 1s;
 }
-.explorer a:hover {
+main .explorer a:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: #ff79da;
 }
-
-.fonctionnement {
+main .fonctionnement {
   padding: 40px 0 40px 20px;
 }
-.fonctionnement h2 {
+main .fonctionnement h2 {
   font-size: 2.5rem;
   font-weight: bold;
   padding-bottom: 5px;
 }
-.fonctionnement ul {
+main .fonctionnement ul {
   font-size: 1.5rem;
 }
-.fonctionnement ul li {
+@media (min-width: 992px) {
+  main .fonctionnement ul {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+main .fonctionnement ul li {
   display: flex;
   margin: 20px;
 }
-.fonctionnement ul li a {
+@media (min-width: 992px) {
+  main .fonctionnement ul li {
+    flex: 1;
+  }
+}
+main .fonctionnement ul li a {
   flex: 1;
   padding: 25px 20px;
   border-radius: 25px;
@@ -224,7 +243,7 @@ header img {
   position: relative;
   transition: box-shadow 1s, background-color 1s;
 }
-.fonctionnement ul li a span {
+main .fonctionnement ul li a span {
   font-size: 1.3rem;
   position: absolute;
   left: -12px;
@@ -234,35 +253,34 @@ header img {
   background-color: #9356DC;
   color: #ffffff;
 }
-.fonctionnement ul li a i {
+main .fonctionnement ul li a i {
   font-size: 2rem;
   padding: 0 10px;
   color: #353535;
   transition: color 1s;
 }
-.fonctionnement ul li a:hover {
+main .fonctionnement ul li a:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: #F5EDFF;
 }
-.fonctionnement ul li a:hover i {
+main .fonctionnement ul li a:hover i {
   color: #9356DC;
 }
-
-.restaurants {
+main .restaurants {
   padding: 40px 20px;
   background-color: #f6f6f6;
 }
-.restaurants h2 {
+main .restaurants h2 {
   font-size: 2.5rem;
   font-weight: bold;
   padding-bottom: 20px;
 }
-.restaurants__cards {
+main .restaurants__cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.restaurants__cards > a {
+main .restaurants__cards > a {
   height: 300px;
   width: 450px;
   margin-bottom: 20px;
@@ -275,7 +293,12 @@ header img {
   display: flex;
   transition: box-shadow 1s;
 }
-.restaurants__cards > a > p {
+@media (min-width: 768px) {
+  main .restaurants__cards > a {
+    width: 45%;
+  }
+}
+main .restaurants__cards > a > p {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -285,79 +308,62 @@ header img {
   background-color: #99e2d0;
   border-radius: 3px;
 }
-.restaurants__cards > a img {
+main .restaurants__cards > a img {
   flex: 7;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
   overflow: hidden;
 }
-.restaurants__cards > a > div {
+main .restaurants__cards > a img:nth-child(0n+2) {
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+main .restaurants__cards > a > div {
   flex: 2;
   font-size: 1.5rem;
   display: flex;
   padding: 15px 15px 0;
   justify-content: space-between;
 }
-.restaurants__cards > a > div > div h3 {
+main .restaurants__cards > a > div > div h3 {
   margin-bottom: 10px;
 }
-.restaurants__cards > a > div > div h3 span {
+main .restaurants__cards > a > div > div h3 span {
   text-transform: uppercase;
 }
-.restaurants__cards > a > div > div p {
+main .restaurants__cards > a > div > div p {
   font-weight: lighter;
 }
-.restaurants__cards > a > div button {
+main .restaurants__cards > a > div .hearth {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
-.restaurants__cards > a > div button i {
+main .restaurants__cards > a > div .hearth i {
   font-size: 3rem;
 }
-.restaurants__cards > a > div button .fa-solid {
-  margin-top: 10px;
+main .restaurants__cards > a > div .hearth .fa-solid {
+  margin: 10px 0 0 10px;
   color: #9356DC;
   width: 0;
   height: 0;
   overflow: hidden;
   font-size: 1rem;
-  transition: font-size 1.5s, margin-top 1.5s;
+  transition: font-size 1.5s, margin 1.5s;
 }
-.restaurants__cards > a > div button:hover .fa-solid {
-  margin-top: 0;
+main .restaurants__cards > a > div .hearth:hover .fa-solid {
+  margin: 0;
   width: 30px;
   height: 30px;
   font-size: 3rem;
 }
-.restaurants__cards > a > div button:hover .fa-regular {
+main .restaurants__cards > a > div .hearth:hover .fa-regular {
   display: none;
   overflow: hidden;
   display: none;
 }
-.restaurants__cards > a:hover {
+main .restaurants__cards > a:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-footer {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5rem;
-  background-color: #353535;
-}
-footer .footer__link {
-  color: #fff;
-  padding: 5px 0;
-}
-footer .footer__link .footer__link__icon {
-  width: 24px;
-  padding: 0 10px 0 0;
-}
-footer .footer__logo {
-  font-size: 1.8rem;
-  padding-bottom: 20px;
-  font-family: "Shrikhand", Arial, sans-serif;
 }/*# sourceMappingURL=accueil.css.map */

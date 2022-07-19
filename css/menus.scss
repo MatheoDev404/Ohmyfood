@@ -1,70 +1,16 @@
-// VAR
-$purple: #9356DC;
 
-$pink: #ff79da;
-$light-pink:#F5EDFF;
-
-$green: #99E2D0;
-
-$black: #000000;
-
-$white: #ffffff;
-
-$grey:#EAEAEA;
-$dark-grey:#353535;
-$light-grey:#f6f6f6;
-
-// KEYFRAME
-
-@keyframes fadeIn { 
-    100% { opacity: 1; }
-}
-
-@keyframes spin { 
-    100% { 
-        transform:rotate(360deg); 
-    } 
-}
-
-// GLOBAL CSS
-html{
-    font-family: 'Roboto';
-    font-size: 10px; // 10px, pour faciliter les calculs en rem
-}
-
-h1,h2,h3,h4,h5,p,input,ul{
-    padding: 0;
-    margin: 0;
-}
-
-ul{
-    list-style: none;
-}
-
-button{
-    border:none;
-    background-color: #fff;
-}
-
-button:hover{
-    border:none;
-    background-color: #fff;
-}
-
-a{
-    text-decoration: none;
-    color: #000;
-}
-
-a:visited{
-    color: #000;
-}
+// IMPORTS
+@import "normalize.css";
+@import "main.css";
+@import "variables.scss";
+@import "keyframes.scss";
+@import "footer.scss";
 
 // HEADER
 header{
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     a{
         position: absolute;
@@ -72,8 +18,7 @@ header{
         top: 20px;
         font-size: 3rem;
     }
-
-    .header__logo{
+    img{
         width: 200px;
         padding : 20px 0;
     }
@@ -100,14 +45,19 @@ main{
     }
 } 
 .menu{
+    width:100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 25px;
     img{
         width:100%;
+        max-height: 300px;
         object-fit: cover;
-        object-position: 50% 50%;
+        object-position: 50% 65%;
+        @media (min-width: 992px) {
+            max-height: 400px;
+        }
     }
     &__title{
         width: 100%;
@@ -117,16 +67,43 @@ main{
         border-radius: 50px;
         overflow: hidden;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         h1{
+            margin-left: 30px;
             padding-right:30px;
             font-size: 3rem;
             font-family: "Shrikhand", Arial, sans-serif;
         }
-        button{
+        .hearth{
+            margin-right: 30px;
             background-color: $grey;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
             i{
-                font-size: 2.5rem;
+                font-size: 3rem;
+            }
+            .fa-solid {
+                margin: 10px 0 0 10px;
+                color: $purple;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                font-size: 1rem;
+                transition: font-size 1.5s,margin 1.5s;
+            }
+        }
+        .hearth:hover{
+            .fa-solid{
+                margin: 0;
+                width: 30px;
+                height: 30px;
+                font-size: 3rem;
+            }
+            .fa-regular{
+                display:none;
+                overflow: hidden;
+                display: none;
             }
         }
     }
@@ -136,9 +113,15 @@ main{
 .plats,
 .desserts{
     width: 100%;
-    padding: 10px;
+    @media (min-width: 992px) {
+        width: 50%;
+        &:nth-child(4){
+            width: 100%;
+            margin-right:50%;
+        }
+    }
     h2{
-        padding: 10px 10px 20px 10px;
+        padding: 10px 10px 40px 10px;
         font-size: 1.8rem;
         font-weight: lighter;
         text-transform: uppercase;
@@ -151,13 +134,13 @@ main{
         opacity: 0;
         background-color: #ffffff;
         border-radius: 25px;
-        margin-bottom: 10px;
+        margin: 10px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         overflow: hidden;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         transition: box-shadow 1s;
-        animation: fadeIn 1s forwards;
+        animation: fadeIn 2s forwards;
         &:nth-child(2){
             animation-delay: 0.5s;
         }
@@ -174,19 +157,33 @@ main{
             width: 100%;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
             padding: 20px;
-            h3{
-                width: 100%;
-                font-size: 1.8rem;
-                padding-bottom: 10px;
+            min-width: 0;
+            transition: width 1s;
+            div{
+                white-space: nowrap;
+                overflow: hidden;
+                h3{
+                    font-size: 1.8rem;
+                    padding-bottom: 10px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                p{
+                    font-size:1.5rem ;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
             }
-            p{
+            &__price{
+                padding: 30px 0 0 10px;
                 font-size:1.5rem ;
-            }
-            p:last-of-type{
+                flex-shrink: 0;
                 font-weight: bold;
             }
+            
         }
         .cards__check{
             display: flex;
@@ -203,48 +200,31 @@ main{
     }
     .cards:hover{
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
         .cards__check{
             width: 120px;
             i{
-                animation: spin 1s ;
+                animation: spin 1s;
             }
         }  
     }
 }
 .commander{
+    cursor: pointer;
     margin: 40px 0;
     padding: 15px 25px;
     font-size: 1.8rem;
     color: $white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background: $purple;
+    background-color: $purple;
+    background-image: linear-gradient(0deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.6) 100%);
     border-radius: 25px;
     transition: box-shadow 1s, background-color 1s;
+    @media (min-width: 768px) {
+        padding: 15px 70px;
+    }
 }
 .commander:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: $pink;
-}
-
-// FOOTER
-
-footer{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    font-size:1.5rem ;
-    background-color: #353535;
-    .footer__link{
-        color: #fff;
-        padding: 5px 0;
-        &__icon{
-            width: 24px;
-            padding: 0 10px 0 0;
-        }
-    }
-    .footer__logo {
-        font-size:1.8rem;
-        padding-bottom: 20px;
-        font-family: "Shrikhand", Arial, sans-serif;
-    }
 }

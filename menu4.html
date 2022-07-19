@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,6 @@
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap" rel="stylesheet"> 
     
-    <!-- NORMALIZE CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-
     <!-- CSS  -->
     <link rel="stylesheet" href="css/menus.css">
 
@@ -22,7 +19,7 @@
 <body>
     <header>
         <a href="accueil.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <img class="header__logo"src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
+        <img src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
     </header>
     <main>
         <section class="menu">
@@ -30,18 +27,21 @@
             
             <div class="menu__title">
                 <h1>Le délice des sens</h1>
-                <button type="button">
+                <div class="hearth">
                     <i class="fa-regular fa-heart"></i>
-                </button>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
             </div>
         </section>
         <section class="entrees">
             <h2><span>Entr</span>ées</h2>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Tartare de thon</h3>
-                    <p>Assaisonné au yuzu</p>
-                    <p>25€</p>
+                    <div>
+                        <h3>Tartare de thon</h3>
+                        <p>Assaisonné au yuzu</p>
+                    </div>
+                    <p class="cards__body__price">25€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
@@ -49,9 +49,11 @@
             </div>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Bouchée de homard croustillant</h3>
-                    <p>Et sa farandole de petits légumes</p>
-                    <p>35€</p>
+                    <div>
+                        <h3>Bouchée de homard croustillant</h3>
+                        <p>Et sa farandole de petits légumes</p>
+                    </div>
+                    <p class="cards__body__price">35€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
@@ -59,9 +61,11 @@
             </div>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Velouté de cèpes</h3>
-                    <p>Aux truffes</p>
-                    <p>20€</p>
+                    <div>
+                        <h3>Velouté de cèpes</h3>
+                        <p>Aux truffes</p>
+                    </div>
+                    <p class="cards__body__price">20€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
@@ -72,9 +76,11 @@
             <h2><span>Plat</span>s</h2>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Poulet rôti aux herbes de Provence</h3>
-                    <p>Et sa crème de truffe</p>
-                    <p>40€</p>
+                    <div>
+                        <h3>Poulet rôti aux herbes de Provence</h3>
+                        <p>Et sa crème de truffe</p>
+                    </div>
+                    <p class="cards__body__price">40€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
@@ -82,9 +88,11 @@
             </div>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Langouste rôtie</h3>
-                    <p>Et ses légumes de saison</p>
-                    <p>35€</p>
+                    <div>
+                        <h3>Langouste rôtie</h3>
+                        <p>Et ses légumes de saison</p>
+                    </div>
+                    <p class="cards__body__price">35€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
@@ -92,9 +100,11 @@
             </div>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Côte de boeuf Angus</h3>
-                    <p>Et sa purée de panais</p>
-                    <p>44€</p>
+                    <div>
+                        <h3>Côte de boeuf Angus</h3>
+                        <p>Et sa purée de panais</p>
+                    </div>
+                    <p class="cards__body__price">44€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
@@ -105,9 +115,11 @@
             <h2><span>Dess</span>erts</h2>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Farandole de desserts</h3>
-                    <p>Du chef</p>
-                    <p>18€</p>
+                    <div>
+                        <h3>Farandole de desserts</h3>
+                        <p>Du chef</p>
+                    </div>
+                    <p class="cards__body__price">18€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
@@ -115,9 +127,11 @@
             </div>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Crème brulée</h3>
-                    <p>Revisitée</p>
-                    <p>22€</p>
+                    <div>
+                        <h3>Crème brulée</h3>
+                        <p>Revisitée</p>
+                    </div>
+                    <p class="cards__body__price">22€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
@@ -125,9 +139,11 @@
             </div>
             <div class="cards">
                 <div class="cards__body">
-                    <h3>Tiramisu</h3>
-                    <p>À la noisette</p>
-                    <p>23€</p>
+                    <div>
+                        <h3>Tiramisu</h3>
+                        <p>À la noisette</p>
+                    </div>
+                    <p class="cards__body__price">23€</p>
                 </div>
                 <div class="cards__check">
                     <i class="fa-solid fa-circle-check"></i>
