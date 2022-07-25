@@ -350,7 +350,7 @@ template {
 /*  GLOBAL CSS */
 html{
     font-family: 'Roboto';
-    font-size: 10px; // 10px, pour faciliter les calculs en rem
+    font-size: 10px; /*  10px, pour faciliter les calculs en rem */
     box-sizing: border-box;
 }
 

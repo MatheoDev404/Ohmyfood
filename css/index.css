@@ -449,90 +449,246 @@ footer .footer__logo {
   font-family: "Shrikhand", Arial, sans-serif;
 }
 
+.loader {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-around;
+  overflow: hidden;
+  -webkit-animation: fadeOut 2s linear forwards;
+          animation: fadeOut 2s linear forwards;
+}
+.loader__animation {
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #9356DC;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-animation: pulse 1s linear infinite;
+          animation: pulse 1s linear infinite;
+}
+.loader__animation:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #9356DC;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: scaleUp 1s linear infinite;
+          animation: scaleUp 1s linear infinite;
+}
+
 header {
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-header a {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  font-size: 3rem;
 }
 header img {
   width: 200px;
   padding: 20px 0;
 }
 
-main {
-  background-color: #EAEAEA;
+main .localisation {
+  padding: 20px 0 20px 60px;
+  font-size: 1.8rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  box-shadow: inset 0px 4px 5px -1px rgba(0, 0, 0, 0.6);
 }
-main > a {
-  margin: 30px auto 70px;
-  padding: 15px 50px;
+main .localisation i {
+  padding: 0 25px 5px;
+}
+main .localisation input {
+  background-color: #EAEAEA;
+  border: none;
+}
+main .localisation input:focus {
+  outline: none;
+}
+main .explorer {
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+main .explorer h2 {
+  width: 100%;
+  padding-top: 50px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+main .explorer p {
+  width: 100%;
+  padding-top: 20px;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+main .explorer a {
+  margin: 40px 0;
+  padding: 15px 25px;
   font-size: 1.8rem;
   color: #ffffff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(257deg, rgb(2, 0, 36) 0%, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 25px;
+  background-color: #9356DC;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
+  transition: box-shadow 1s, background-color 1s;
 }
-main > a:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+main .explorer a:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #ff79da;
 }
-
-.menu {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-radius: 25px;
+main .fonctionnement {
+  padding: 40px 0 40px 20px;
 }
-.menu img {
-  width: 100%;
-  max-height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 65%;
-     object-position: 50% 65%;
+main .fonctionnement h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+main .fonctionnement ul {
+  font-size: 1.5rem;
 }
 @media (min-width: 992px) {
-  .menu img {
-    max-height: 400px;
+  main .fonctionnement ul {
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
-.menu__title {
-  width: 100%;
-  margin-top: -50px;
-  padding: 50px 0 20px 0;
-  background-color: #EAEAEA;
-  border-radius: 50px;
-  overflow: hidden;
+main .fonctionnement ul li {
   display: flex;
+  margin: 20px;
+}
+@media (min-width: 992px) {
+  main .fonctionnement ul li {
+    flex: 1;
+  }
+}
+main .fonctionnement ul li a {
+  flex: 1;
+  padding: 25px 20px;
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+  transition: box-shadow 1s, background-color 1s;
+}
+main .fonctionnement ul li a span {
+  font-size: 1.3rem;
+  position: absolute;
+  left: -12px;
+  top: 30%;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background-color: #9356DC;
+  color: #ffffff;
+}
+main .fonctionnement ul li a i {
+  font-size: 2rem;
+  padding: 0 10px;
+  color: #353535;
+  transition: color 1s;
+}
+main .fonctionnement ul li a:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #F5EDFF;
+}
+main .fonctionnement ul li a:hover i {
+  color: #9356DC;
+}
+main .restaurants {
+  padding: 40px 20px;
+  background-color: #f6f6f6;
+}
+main .restaurants h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+main .restaurants__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .restaurants__cards > a {
+  height: 300px;
+  width: 450px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  transition: box-shadow 1s;
+}
+@media (min-width: 768px) {
+  main .restaurants__cards > a {
+    width: 45%;
+  }
+}
+main .restaurants__cards > a > p {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.4rem;
+  padding: 8px 15px;
+  color: #1c7a63;
+  background-color: #99e2d0;
+  border-radius: 3px;
+}
+main .restaurants__cards > a img {
+  flex: 7;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+  overflow: hidden;
+}
+main .restaurants__cards > a img:nth-child(0n+2) {
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+main .restaurants__cards > a > div {
+  flex: 2;
+  font-size: 1.5rem;
+  display: flex;
+  padding: 15px 15px 0;
   justify-content: space-between;
 }
-.menu__title h1 {
-  margin-left: 30px;
-  padding-right: 30px;
-  font-size: 3rem;
-  font-family: "Shrikhand", Arial, sans-serif;
+main .restaurants__cards > a > div > div h3 {
+  margin-bottom: 10px;
 }
-.menu__title .hearth {
-  margin-right: 30px;
-  background-color: #EAEAEA;
+main .restaurants__cards > a > div > div h3 span {
+  text-transform: uppercase;
+}
+main .restaurants__cards > a > div > div p {
+  font-weight: lighter;
+}
+main .restaurants__cards > a > div .hearth {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
-.menu__title .hearth i {
+main .restaurants__cards > a > div .hearth i {
   font-size: 3rem;
 }
-.menu__title .hearth .fa-solid {
+main .restaurants__cards > a > div .hearth .fa-solid {
   margin: 10px 0 0 10px;
   color: #9356DC;
   width: 0;
@@ -541,182 +697,17 @@ main > a:hover {
   font-size: 1rem;
   transition: font-size 1.5s, margin 1.5s;
 }
-.menu__title .hearth:hover .fa-solid {
+main .restaurants__cards > a > div .hearth:hover .fa-solid {
   margin: 0;
   width: 30px;
   height: 30px;
   font-size: 3rem;
 }
-.menu__title .hearth:hover .fa-regular {
+main .restaurants__cards > a > div .hearth:hover .fa-regular {
   display: none;
   overflow: hidden;
   display: none;
 }
-
-.entrees,
-.plats,
-.desserts {
-  width: 100%;
-}
-@media (min-width: 992px) {
-  .entrees,
-.plats,
-.desserts {
-    width: 50%;
-  }
-  .entrees:nth-child(4),
-.plats:nth-child(4),
-.desserts:nth-child(4) {
-    width: 100%;
-    margin-right: 50%;
-  }
-}
-.entrees h2,
-.plats h2,
-.desserts h2 {
-  padding: 10px 10px 40px 10px;
-  font-size: 1.8rem;
-  font-weight: lighter;
-  text-transform: uppercase;
-}
-.entrees h2 span,
-.plats h2 span,
-.desserts h2 span {
-  padding-bottom: 5px;
-  border-bottom: #99E2D0 solid 3px;
-}
-.entrees .cards,
-.plats .cards,
-.desserts .cards {
-  opacity: 0;
-  background-color: #ffffff;
-  border-radius: 25px;
-  margin: 10px;
-  display: flex;
-  justify-content: space-around;
-  overflow: hidden;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transition: box-shadow 1s;
-  -webkit-animation: fadeIn 2s forwards;
-          animation: fadeIn 2s forwards;
-}
-.entrees .cards:nth-child(2),
-.plats .cards:nth-child(2),
-.desserts .cards:nth-child(2) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-.entrees .cards:nth-child(3),
-.plats .cards:nth-child(3),
-.desserts .cards:nth-child(3) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.entrees .cards:nth-child(4),
-.plats .cards:nth-child(4),
-.desserts .cards:nth-child(4) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-.entrees .cards:nth-child(5),
-.plats .cards:nth-child(5),
-.desserts .cards:nth-child(5) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-.entrees .cards .cards__body,
-.plats .cards .cards__body,
-.desserts .cards .cards__body {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  min-width: 0;
-  transition: width 1s;
-}
-.entrees .cards .cards__body div,
-.plats .cards .cards__body div,
-.desserts .cards .cards__body div {
-  white-space: nowrap;
-  overflow: hidden;
-}
-.entrees .cards .cards__body div h3,
-.plats .cards .cards__body div h3,
-.desserts .cards .cards__body div h3 {
-  font-size: 1.8rem;
-  padding-bottom: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.entrees .cards .cards__body div p,
-.plats .cards .cards__body div p,
-.desserts .cards .cards__body div p {
-  font-size: 1.5rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.entrees .cards .cards__body__price,
-.plats .cards .cards__body__price,
-.desserts .cards .cards__body__price {
-  padding: 30px 0 0 10px;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  font-weight: bold;
-}
-.entrees .cards .cards__check,
-.plats .cards .cards__check,
-.desserts .cards .cards__check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  width: 0;
-  transition: width 0.75s;
-}
-.entrees .cards .cards__check i,
-.plats .cards .cards__check i,
-.desserts .cards .cards__check i {
-  color: #ffffff;
-  font-size: 2.5rem;
-}
-.entrees .cards:hover,
-.plats .cards:hover,
-.desserts .cards:hover {
+main .restaurants__cards > a:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.entrees .cards:hover .cards__check,
-.plats .cards:hover .cards__check,
-.desserts .cards:hover .cards__check {
-  width: 120px;
-}
-.entrees .cards:hover .cards__check i,
-.plats .cards:hover .cards__check i,
-.desserts .cards:hover .cards__check i {
-  -webkit-animation: spin 1s;
-          animation: spin 1s;
-}
-
-.commander {
-  cursor: pointer;
-  margin: 40px 0;
-  padding: 15px 25px;
-  font-size: 1.8rem;
-  color: #ffffff;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-color: #9356DC;
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
-  border-radius: 25px;
-  transition: box-shadow 1s, background-color 1s;
-}
-@media (min-width: 768px) {
-  .commander {
-    padding: 15px 70px;
-  }
-}
-
-.commander:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: #ff79da;
-}/*# sourceMappingURL=menus.css.map */
+}/*# sourceMappingURL=index.css.map */
