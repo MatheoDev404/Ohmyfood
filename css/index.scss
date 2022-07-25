@@ -101,7 +101,7 @@ main{
             margin: 40px 0;
             background: rgb(255,121,218);
             background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(161,107,224,1) 50%); 
-
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             transition: box-shadow 1s;
             overflow: hidden;
             z-index: 1;
@@ -127,9 +127,10 @@ main{
             }
             :hover::before {
                 opacity: 1;
-                
-                
             }
+        }
+        .gradient:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
         
           
