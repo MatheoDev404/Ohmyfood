@@ -1,10 +1,10 @@
 
 // IMPORTS
-@import "normalize.css";
-@import "main.css";
-@import "variables.scss";
-@import "keyframes.scss";
-@import "footer.scss";
+@import "normalize";
+@import "_main";
+@import "_variables";
+@import "_keyframes";
+@import "_footer";
 
 // HEADER
 header{
