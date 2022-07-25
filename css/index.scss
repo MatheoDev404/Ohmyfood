@@ -75,7 +75,7 @@ main{
         }
     }
     .explorer{
-        padding:0 50px;
+        padding:0 35px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -95,21 +95,45 @@ main{
             font-size: 2rem;
             font-weight: lighter;
         }
-        a{
-            margin: 40px 0;
-            padding: 15px 25px;
-            font-size: 1.8rem;
-            color: $white;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        .gradient {
+            position: relative;
             border-radius: 25px;
-            background-color: $purple;
-            background-image: linear-gradient(0deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.6) 100%);
-            transition: box-shadow 1s, background-color 1s;
+            margin: 40px 0;
+            background: rgb(255,121,218);
+            background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(161,107,224,1) 50%); 
+
+            transition: box-shadow 1s;
+            overflow: hidden;
+            z-index: 1;
+
+            a{
+                padding: 15px 25px;
+                line-height: 5rem;
+                font-size: 1.8rem;
+                color: $white;
+            }
+            :before {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgb(255,121,218);
+                background: linear-gradient(180deg, rgba(255,121,218,1) 50%, rgba(161,107,224,1) 100%); 
+                z-index: -1;
+                transition: opacity 0.5s linear;
+                opacity: 0;
+            }
+            :hover::before {
+                opacity: 1;
+                
+                
+            }
         }
-        a:hover{
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            background-color: $pink;
-        }
+        
+          
+        
     }
     .fonctionnement{
         padding: 40px 0 40px 20px;
@@ -132,6 +156,7 @@ main{
                     flex :1;
                 }
                 a{
+                    font-weight: bold;
                     flex:1;
                     padding: 25px 20px;
                     border-radius: 25px;
@@ -195,7 +220,7 @@ main{
                 @media (min-width: 768px) {
                     width: 45%;
                 }
-                > p{
+                > span{
                     position: absolute;
                     top: 15px;
                     right: 15px;
