@@ -64,7 +64,10 @@ main{
         background-color: $grey;
         box-shadow: inset 0px 4px 5px -1px rgba(0,0,0,0.6);
         i{
-            padding: 0 25px 5px;
+            color: #aeaeae;
+            font-size: 2rem;
+            padding: 0 15px 12px;
+            
         }
         input{
             background-color: $grey;
@@ -92,7 +95,7 @@ main{
         p{
             width: 100%;
             padding-top: 20px;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: lighter;
         }
         .gradient {
@@ -132,8 +135,6 @@ main{
         .gradient:hover {
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
-        
-          
         
     }
     .fonctionnement{
@@ -207,8 +208,8 @@ main{
             flex-wrap: wrap;
             justify-content: space-around;
             > a{
-                height: 300px;
-                width: 450px;
+                height: 250px;
+                width: 350px;
                 margin-bottom: 20px;
                 background-color: #fff;
                 border-radius: 25px;
@@ -220,6 +221,9 @@ main{
                 transition: box-shadow 1s;
                 @media (min-width: 768px) {
                     width: 45%;
+                }
+                @media (min-width: 998px) {
+                    width: 23%;
                 }
                 > span{
                     position: absolute;
@@ -237,7 +241,7 @@ main{
                     object-position: 50% 100%;
                     overflow: hidden;
                     &:nth-child(0n+2){
-                    object-position: 50% 60%;
+                        object-position: 50% 60%;
                     }
                 }
                 
@@ -248,14 +252,16 @@ main{
                     padding: 15px 15px 0;
                     justify-content: space-between;
                     > div {
+                        margin-bottom: 20px;
                         h3{
-                            margin-bottom: 10px;
+                            margin-bottom: 5px;
                             span{
                                 text-transform: uppercase;
                             }
                         }
                         p{
                             font-weight: lighter;
+                            
                         }
                     }
                     .hearth{
