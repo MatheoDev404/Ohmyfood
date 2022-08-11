@@ -268,30 +268,22 @@ main{
                         width: 30px;
                         height: 30px;
                         cursor: pointer;
+                        position: relative;
                         i{
                             font-size: 3rem;
+                            position: absolute;
+                            
                         }
                         .fa-solid {
-                            margin: 10px 0 0 10px;
                             color: $purple;
-                            width: 0;
-                            height: 0;
+                            opacity: 0;
                             overflow: hidden;
-                            font-size: 1rem;
-                            transition: font-size 1.5s,margin 1.5s;
+                            transition: opacity 1.5s;
                         }
                     }
                     .hearth:hover{
                         .fa-solid{
-                            margin: 0;
-                            width: 30px;
-                            height: 30px;
-                            font-size: 3rem;
-                        }
-                        .fa-regular{
-                            display:none;
-                            overflow: hidden;
-                            display: none;
+                            opacity: 1;
                         }
                     }
                 }

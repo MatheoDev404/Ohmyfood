@@ -528,29 +528,20 @@ main > a:hover {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  position: relative;
 }
 .menu__title .hearth i {
   font-size: 3rem;
+  position: absolute;
 }
 .menu__title .hearth .fa-solid {
-  margin: 10px 0 0 10px;
   color: #9356DC;
-  width: 0;
-  height: 0;
   overflow: hidden;
-  font-size: 1rem;
-  transition: font-size 1.5s, margin 1.5s;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 .menu__title .hearth:hover .fa-solid {
-  margin: 0;
-  width: 30px;
-  height: 30px;
-  font-size: 3rem;
-}
-.menu__title .hearth:hover .fa-regular {
-  display: none;
-  overflow: hidden;
-  display: none;
+  opacity: 1;
 }
 
 .entrees,

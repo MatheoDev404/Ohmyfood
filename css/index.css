@@ -716,29 +716,20 @@ main .restaurants__cards > a > div .hearth {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  position: relative;
 }
 main .restaurants__cards > a > div .hearth i {
   font-size: 3rem;
+  position: absolute;
 }
 main .restaurants__cards > a > div .hearth .fa-solid {
-  margin: 10px 0 0 10px;
   color: #9356DC;
-  width: 0;
-  height: 0;
+  opacity: 0;
   overflow: hidden;
-  font-size: 1rem;
-  transition: font-size 1.5s, margin 1.5s;
+  transition: opacity 1.5s;
 }
 main .restaurants__cards > a > div .hearth:hover .fa-solid {
-  margin: 0;
-  width: 30px;
-  height: 30px;
-  font-size: 3rem;
-}
-main .restaurants__cards > a > div .hearth:hover .fa-regular {
-  display: none;
-  overflow: hidden;
-  display: none;
+  opacity: 1;
 }
 main .restaurants__cards > a:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
