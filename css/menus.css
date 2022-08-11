@@ -406,13 +406,13 @@ a:visited {
     height: 0;
   }
 }
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes slideIn {
   100% {
     opacity: 1;
     transform: translateY(-20px);
   }
 }
-@keyframes fadeIn {
+@keyframes slideIn {
   100% {
     opacity: 1;
     transform: translateY(-20px);
@@ -588,8 +588,8 @@ main > a:hover {
   overflow: hidden;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: box-shadow 1s;
-  -webkit-animation: fadeIn 2s forwards;
-          animation: fadeIn 2s forwards;
+  -webkit-animation: slideIn 2s forwards;
+          animation: slideIn 2s forwards;
 }
 .entrees .cards:nth-child(2),
 .plats .cards:nth-child(2),
