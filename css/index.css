@@ -723,7 +723,10 @@ main .restaurants__cards > a > div .hearth i {
   position: absolute;
 }
 main .restaurants__cards > a > div .hearth .fa-solid {
-  color: #9356DC;
+  background: linear-gradient(180deg, rgb(161, 107, 224) 35%, rgb(255, 121, 218) 97%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
   overflow: hidden;
   transition: opacity 1.5s;

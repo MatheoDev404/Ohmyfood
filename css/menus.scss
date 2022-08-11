@@ -85,9 +85,11 @@ main{
                 position: absolute;
             }
             .fa-solid {
-                color: $purple;
+                background: linear-gradient(180deg, rgba(161,107,224,1) 35%, rgba(255,121,218,1) 97%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0;
                 overflow: hidden;
-                opacity:0;
                 transition: opacity 1.5s;
             }
         }
