@@ -7,7 +7,7 @@ restaurants car leur menu est préparé à l’avance.
 
 Plus de perte de temps à consulter la carte !
 
-![maquettes mobile](/assets/images/other/15982605908418_Maquettes_Ohmyfood.jpg)
+![maquettes mobile](img/other/15982605908418_Maquettes_Ohmyfood.jpg)
 
 Objectif :
 
