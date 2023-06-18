@@ -10,4 +10,4 @@ description : intégration d'une premiere version du site  de commande de repas 
 - Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
 - Mettre en place son environnement Front-End
 
-![maquettes mobile](img/other/projet-la-panthere-image-1.png)
+![maquettes mobile](img/other/projet-ohmyfood-image-1.png)
